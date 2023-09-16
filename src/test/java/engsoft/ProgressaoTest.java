@@ -5,15 +5,15 @@ import junit.framework.TestCase;
 public class ProgressaoTest extends TestCase { 
 
     public void testProgressaoAritmetica() {
-//        Progressao p = new ProgressaoAritmetica();
-//        assertEquals(0, p.inicia());
-//        assertEquals(1, p.proxTermo());
-//        assertEquals(2, p.proxTermo());
-//        assertEquals(4, p.iesimoTermo(4));
-//        assertEquals(6, p.iesimoTermo(6));
-//        assertEquals("0 1 2 3 4 5 6 7 8 9 10\n",
-//                     p.imprimeProgressao(10));
-//
+        Progressao p = new ProgressaoAritmetica();
+        assertEquals(0, p.inicia());
+        assertEquals(1, p.proxTermo());
+        assertEquals(2, p.proxTermo());
+        assertEquals(4, p.iesimoTermo(4));
+        assertEquals(6, p.iesimoTermo(6));
+        assertEquals("0 1 2 3 4 5 6 7 8 9 10\n",
+                     p.imprimeProgressao(10));
+
 //        p = new ProgressaoAritmetica(5);
 //        assertEquals(0, p.inicia());
 //        assertEquals(5, p.proxTermo());
@@ -24,7 +24,7 @@ public class ProgressaoTest extends TestCase {
 //                     p.imprimeProgressao(10));
     }
 
-    public void testProgressaoGeometrica() {
+//    public void testProgressaoGeometrica() {
 //        Progressao p = new ProgressaoGeometrica();
 //        assertEquals(1, p.inicia());
 //        assertEquals(2, p.proxTermo());
@@ -42,7 +42,7 @@ public class ProgressaoTest extends TestCase {
 //        assertEquals(15625, p.iesimoTermo(6));
 //        assertEquals("1 5 25 125 625 3125 15625 78125 390625 1953125 9765625\n",
 //                     p.imprimeProgressao(10));
-    }
+//    }
 }
 
 
