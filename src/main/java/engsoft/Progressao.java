@@ -4,12 +4,17 @@ import java.util.List;
 
 public abstract class Progressao {
 
+    private int first;
+    private int current;
+
     public Progressao() {
+    	current = first;
     }
 
    
     public Progressao(int first) {
-    	prog.add(first);
+        this.first = 0;
+        this.current = first;
     }
 
     
