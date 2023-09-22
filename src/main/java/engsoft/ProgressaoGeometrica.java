@@ -1,18 +1,18 @@
 package engsoft;
 
-public class ProgressaoAritmetica extends Progressao {
+public class ProgressaoGeometrica extends Progressao {
     private int first;
     private int current;
     private int addition;
 
-    public ProgressaoAritmetica() {
-        this.first = 0;
-        this.addition = 1;
+    public ProgressaoGeometrica() {
+        this.first = 1;
+        this.addition = 2;
         this.current = first;
     }
 
-    public ProgressaoAritmetica(int addition) {
-        this.first = 0;
+    public ProgressaoGeometrica (int addition) {
+        this.first = 1;
         this.addition = addition;
         this.current = first;
     }
@@ -22,21 +22,26 @@ public class ProgressaoAritmetica extends Progressao {
     }
 
     public int proxTermo() {
-        current += addition;
+        current = addition * current;
         return current;
     }
 
     public int iesimoTermo(int i) {
-        return first + (i) * addition;
+        return first * potenciamento(i);
+    }
+    
+    private int potenciamento(int i) {
+    	int Result = (int) Math.pow(addition, i);
+    	return Result;
     }
 
     public String imprimeProgressao(int n) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n; i++) {
-            sb.append(first + i * addition);
+            sb.append(first * potenciamento(i));
             sb.append(" ");
         }
-        sb.append(first + n * addition).append("\n");
+        sb.append(first * potenciamento(n)).append("\n");
         return sb.toString();
     }
 }
